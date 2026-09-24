@@ -2,6 +2,10 @@ import { FaEnvelope, FaFacebook, FaHandshake, FaHome, FaInstagram, FaPhone, FaTw
 import DropdownMenu from "./DropdownMenu"
 import LoginForm from "./LoginForm"
 
+import SVV_logo from './assets/SVV_logo.png'
+import roemmers_logo from './assets/roemmers.png'
+import axionet_logo from './assets/axionet-logo.png'
+
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -35,7 +39,7 @@ function App() {
         <div className="w-full">
           <div className="max-w-5xl m-auto flex flex-col items-center gap-6 px-4 py-5 sm:flex-row sm:flex-wrap sm:justify-between sm:px-6 lg:px-0">
             <img 
-              src="src/assets/SVV_logo.png"
+              src={SVV_logo}
               alt="Logo SVV"
               className="h-auto w-auto shrink-0"
             />  
@@ -43,7 +47,7 @@ function App() {
             <div className="flex flex-col">
               <p className="text-gray-500 text-[13px]">Sitio web patrocinado por:</p>
               <img 
-                src="src/assets/axionet-logo.png" 
+                src={axionet_logo} 
                 alt="Axionet Logo"
                 className="w-45 max-w-full"
               />  
@@ -62,59 +66,54 @@ function App() {
             <DropdownMenu
               buttonName="INSTITUCION"
               options={[
-                { label: "MI PERFIL", href: "#perfil" },
-                { label: "CONFIGURACIÓN", href: "#configuracion" },
-                { label: "CERRAR SESIÓN", href: "#salir" },
+                { label: "MI PERFIL"},
+                { label: "CONFIGURACIÓN"},
+                { label: "CERRAR SESIÓN"},
               ]}
             />
             <DropdownMenu
               buttonName="DIRECTORIOS"
               options={[
-                { label: "NUESTRA INSTITUCION", href: "#perfil" },
-                { label: "ESTATUTOS", href: "#configuracion" },
-                { label: "JUNTA DIRECTIVA", href: "#salir" },
-                { label: "CAPITULOS", href: "#salir" }
+                { label: "NUESTRA INSTITUCION"},
+                { label: "ESTATUTOS"},
+                { label: "JUNTA DIRECTIVA"},
+                { label: "CAPITULOS"}
               ]}
             />
             <DropdownMenu
               buttonName="EVENTOS"
               options={[
-                { label: "UNIDADES DE HEMODIALISIS", href: "#perfil" },
-                { label: "SERVICIOS DE NEFROLOGIA", href: "#configuracion" },              
+                { label: "UNIDADES DE HEMODIALISIS"},
+                { label: "SERVICIOS DE NEFROLOGIA"},              
               ]}
             />
             <DropdownMenu
               buttonName="INSCRIPCION"
               options={[
-                { label: "INTERNACIONALES", href: "#perfil" },
-                { label: "NACIONALES", href: "#configuracion" },              
+                { label: "INTERNACIONALES"},
+                { label: "NACIONALES"},              
               ]}
             />
             <DropdownMenu
               buttonName="LIBRERIA Y DOCUMENTACION"
               options={[
-                { label: "MIEMBRO ASOCIADO", href: "#perfil" },
-                { label: "MIEMBRO TITULAR", href: "#configuracion" },              
+                { label: "MIEMBRO ASOCIADO"},
+                { label: "MIEMBRO TITULAR"},              
               ]}
             />
             <DropdownMenu
               buttonName="CONTACTO"
               options={[
-                { label: "REVISTA DE NEFROLOGIA DE VENEZUELA", href: "#perfil" },
-                { label: "ARTICULOS CIENTIFICOS EN ESPAÑOL", href: "#configuracion" },
-                { label: "ARTICULOS CIENTIFICOS EN INGLES", href: "#salir" },
-                { label: "GACETA OFICIAL DE HEMODIALISIS", href: "#salir" },
-                { label: "MANUAL CONSENSO CAREM", href: "#salir" },
-                { label: "DIA MUNDIAL DEL RIÑON", href: "#salir" },
-                { label: "NOTICIAS", href: "#salir" }
+                { label: "REVISTA DE NEFROLOGIA DE VENEZUELA"},
+                { label: "ARTICULOS CIENTIFICOS EN ESPAÑOL"},
+                { label: "ARTICULOS CIENTIFICOS EN INGLES"},
+                { label: "GACETA OFICIAL DE HEMODIALISIS"},
+                { label: "MANUAL CONSENSO CAREM"},
+                { label: "DIA MUNDIAL DEL RIÑON"},
+                { label: "NOTICIAS"}
               ]}
             />
-            <div>
-              <button>M</button>
-              <button>M</button>
-              <button>M</button>
-              <button>M</button>
-            </div>
+
           </div>
         </div>
       </header>
@@ -134,12 +133,12 @@ function App() {
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
             <img 
-                src="src\assets\roemmers.png" 
+                src={roemmers_logo} 
                 alt="Axionet Logo"
                 className="w-45 max-w-full"
               /> 
             <img 
-                src="src/assets/axionet-logo.png" 
+                src={axionet_logo} 
                 alt="Axionet Logo"
                 className="w-45 max-w-full py-10"
               /> 
